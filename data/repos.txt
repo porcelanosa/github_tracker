@@ -1,0 +1,7 @@
+glanceapp
+moonshine-software
+revolist
+vuetifyjs
+microsoft
+DiceDB
+google
