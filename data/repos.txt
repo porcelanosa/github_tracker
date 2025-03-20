@@ -5,3 +5,6 @@ vuetifyjs
 microsoft
 DiceDB
 google
+langchain-ai
+toeverything
+e2b-dev
