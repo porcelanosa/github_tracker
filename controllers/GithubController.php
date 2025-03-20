@@ -16,9 +16,9 @@ class GithubController extends Controller
     public function actionIndex(): string
     {
         $lastSync = Yii::$app->db->createCommand("
-        SELECT pushed_at FROM queue 
-        WHERE job LIKE '%SyncGithubJob%' 
-        ORDER BY pushed_at DESC LIMIT 1
+        SELECT done_at FROM queue 
+        WHERE job LIKE '%SyncGithubJob%' and done_at is not null 
+        ORDER BY done_at DESC LIMIT 1
     ")->queryScalar();
         
         $repos = GithubRepository::find()

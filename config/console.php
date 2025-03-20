@@ -32,6 +32,7 @@ $config = [
     'queue' => [
       'class'     => Queue::class,
       'db'        => 'db',
+      'deleteReleased' => false,
       'tableName' => '{{%queue}}',
       'channel'   => 'default',
       'mutex'     => FileMutex::class,
